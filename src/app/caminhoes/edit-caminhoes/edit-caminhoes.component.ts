@@ -20,4 +20,13 @@ export class EditCaminhoesComponent implements OnInit {
     const id = + this.route.snapshot.paramMap.get('id');
     this.caminhaoService.getCaminhao(id).subscribe(caminhao => this.caminhao = new Caminhao(caminhao));
   }
+  public onSubmit({value, valid}: {value: Caminhao, valid: boolean }){
+    this.caminhao = value;
+    console.log(this.caminhao);
+    this.caminhaoService.updateCaminhao(this.caminhao as Caminhao).subscribe();
+    this.refesh();
+  }
+  private refesh(){
+    this.caminhao = new Caminhao({cnpj: "", placa: "", prefixo: ""});
+  }
 }
