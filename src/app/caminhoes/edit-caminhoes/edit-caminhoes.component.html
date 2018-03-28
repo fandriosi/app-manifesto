@@ -1,0 +1,27 @@
+<div class="container" style="width: 50%;">
+  <div class="panel panel-primary">
+      <div class="panel-heading"><h3>Editar Caminhao</h3></div>
+      <form (ngSubmit)="onSubmit(caminhaoForm)" #caminhaoForm="ngForm" class="form-horizontal">
+          <div class="panel-body">               
+              <div class="form-goup" style="text-align: left;">
+                  <label  for="cnpj">CNPJ do Fornecedor:</label>
+                  <input type="text" class="form-control"  id="cnpj" name="cnpj" [(ngModel)] = "caminhao.cnpj" maxlength="19"
+                          required=true/>
+              </div>
+              <div class="form-goup" style="text-align: left;">
+                  <label for="placa" >Placa do Caminhão:</label>
+                  <input type="text" class="form-control" id="placa" name="placa" [(ngModel)] = "caminhao.placa" maxlength="8"
+                          required=true/>
+              </div>
+              <div class="form-goup" style="text-align: left;">
+                  <label for="prefixo">Prefixo Caminhão:</label>
+                  <input type="text" class="form-control col-sm-3"  id="prefixo" name="prefixo"  
+                          [(ngModel)] = "caminhao.prefixo" maxlength="4" required=true/>
+              </div>        
+          </div>
+          <div class="modal-footer" style="text-align: left;"> 
+              <button type="submit" class="btn btn-primary" [disabled]="!caminhaoForm.form.valid">Create</button>
+          </div> 
+      </form>        
+  </div>
+</div>

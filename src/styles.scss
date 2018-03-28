@@ -1,0 +1,46 @@
+@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+.tr-cabecalho {
+    background-color: #0078BF;
+    border-bottom: 1px solid #FFFFFF;
+    height: 92px;
+}
+.th-blue{
+    background-color:#0078BF;
+    color: white;
+}
+.titulo-sistema {
+    width: 80%;
+    padding:0px 50px;
+    text-align:right;
+}
+
+    .titulo-sistema {
+    width: 80%;
+    padding:0px 50px;
+    text-align:right;
+}
+
+    .titulo-sistema h1 {
+        font-size: 32px;
+        color: #FFFFFF;
+        font-family: Arial,Helvetica,sans-serif;
+        font-weight:bold;
+        padding:3px;
+    }
+
+    .titulo-sistema h2 {
+        font-size: 12px;
+        color: #FFFFFF;
+        font-family: Arial,Helvetica,sans-serif;
+        font-weight:bold;
+        padding:3px;
+    }
+    .th-blue{
+        background-color:#0078BF;
+    }
+
+    .bg-blue{
+        background-color:#0078BF;
+        color: white;
+    }
