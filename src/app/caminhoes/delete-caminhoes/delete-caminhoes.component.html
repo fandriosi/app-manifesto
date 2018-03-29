@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <h5 >Delete Caminhão</h5>
+    <table class="table table table-striped table-bordered">
+        <tr>
+          <th class="th-blue" item-width="30%"></th>
+          <th class="th-blue"></th>
+        </tr>    
+        <tr>
+          <td>ID Caminhão: </td>    
+          <td>{{caminhao.id}}</td>
+        </tr>
+        <tr>
+          <td>CNPJ Caminhão</td>
+          <td>{{caminhao.cnpj}}</td>
+        </tr>  
+        <tr>
+          <td>CNPJ Placa</td>
+          <td>{{caminhao.placa}}</td>
+        </tr>
+        <tr>
+          <td>CNPJ Prefixo:</td>
+          <td>{{caminhao.prefixo}}</td>
+        </tr>
+    </table>        
+    <div class="modal-footer" style="justify-content: flex-start;">
+        <button type="button" (click)="delete(caminhao)"  class="btn btn-primary" style="background-color:#0078BF;">Deletar</button>                              
+    </div>
+</div>

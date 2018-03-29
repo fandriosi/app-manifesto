@@ -13,7 +13,9 @@
             <td>{{caminhao.cnpj}}</td>
             <td>{{caminhao.placa | uppercase}}</td>
             <td>{{caminhao.prefixo | uppercase}}</td>
-            <td><button type="button" class="btn btn-primary" style="background-color:#0078BF;" routerLink="edit-caminhoes/{{caminhao.id}}"> editar</button></td>
+            <td><button type="button" class="btn btn-primary" style="background-color:#0078BF;" routerLink="edit-caminhoes/{{caminhao.id}}"> editar</button>   
+                <button type="button" class="btn btn-primary" style="background-color:#0078BF;" routerLink="delete-caminhoes/{{caminhao.id}}">deletar</button>
+            </td>
         </tr>  
     </table>        
     <div class="modal-footer" style="justify-content: flex-start;">

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Caminhao } from 'app/Caminhao';
+import { Caminhao } from 'app/caminhoes/Caminhao';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
@@ -48,5 +48,11 @@ export class CaminhaoService {
     return this.http.put(this.caminhoesUrl, caminhao, httpOptions).
     pipe(tap(_ => this.log(`updated caminhoa id =${caminhao.id}`)),
     catchError(this.handleError<any>('updateCaminhao')));
+  }
+
+  deleteCaminhao(id: number ): Observable<Caminhao>{
+    return this.http.delete<Caminhao>(`${this.caminhoesUrl}/${id}`, httpOptions).
+    pipe(tap(_ => this.log(`delete caminhao id =${id}`)),
+    catchError(this.handleError<Caminhao>('deleteCaminhao')));
   }
 }

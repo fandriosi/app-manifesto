@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
 import {ActivatedRoute } from '@angular/router';
 import { CaminhaoService } from 'app/caminhoes/caminhao.service';
-import { Caminhao} from 'app/Caminhao';
+import { Caminhao} from 'app/caminhoes/Caminhao';
 
 @Component({
   selector: 'app-edit-caminhoes',
@@ -23,7 +23,6 @@ export class EditCaminhoesComponent implements OnInit {
   }
   public onSubmit({value, valid}: {value: Caminhao, valid: boolean }){
     this.caminhao = value;
-    console.log(this.caminhao);
     this.caminhaoService.updateCaminhao(this.caminhao as Caminhao).subscribe();
     this.goBack();
   }

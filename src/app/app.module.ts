@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { EditCaminhoesComponent } from './caminhoes/edit-caminhoes/edit-caminhoes.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { DeleteCaminhoesComponent } from './caminhoes/delete-caminhoes/delete-caminhoes.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
     AppComponent,
     CaminhoesComponent,
     AddCaminhoesComponent,
-    EditCaminhoesComponent
+    EditCaminhoesComponent,
+    DeleteCaminhoesComponent
   ],
   imports: [
     BrowserModule,

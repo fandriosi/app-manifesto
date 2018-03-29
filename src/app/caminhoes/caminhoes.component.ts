@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Caminhao } from '../Caminhao';
-import { CaminhaoService } from './caminhao.service'
+import { Caminhao } from 'app/caminhoes/Caminhao';
+import { CaminhaoService } from 'app/caminhoes/caminhao.service';
 
 @Component({
   selector: 'app-caminhoes',
