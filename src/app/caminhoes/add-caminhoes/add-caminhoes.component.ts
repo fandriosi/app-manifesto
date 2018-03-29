@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { CaminhaoService } from '../caminhao.service';
-import {Caminhao} from './../../Caminhao';
+import { CaminhaoService } from 'app/caminhoes/caminhao.service';
+import {Caminhao} from 'app/Caminhao';
 @Component({
   selector: 'app-add-caminhoes',
   templateUrl: './add-caminhoes.component.html',

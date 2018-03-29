@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
 import {ActivatedRoute } from '@angular/router';
-import { CaminhaoService } from './../caminhao.service';
-import { Caminhao} from '../../Caminhao';
+import { CaminhaoService } from 'app/caminhoes/caminhao.service';
+import { Caminhao} from 'app/Caminhao';
+
 @Component({
   selector: 'app-edit-caminhoes',
   templateUrl: './edit-caminhoes.component.html',
@@ -24,9 +25,9 @@ export class EditCaminhoesComponent implements OnInit {
     this.caminhao = value;
     console.log(this.caminhao);
     this.caminhaoService.updateCaminhao(this.caminhao as Caminhao).subscribe();
-    this.refesh();
+    this.goBack();
   }
-  private refesh(){
-    this.caminhao = new Caminhao({cnpj: "", placa: "", prefixo: ""});
+  private goBack(): void{
+    this.location.back();
   }
 }
